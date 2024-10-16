@@ -18,39 +18,44 @@
             padding: 0;
         }
         html, body {
-            height: 100%; /* تأكد من أن html و body يغطيان كامل ارتفاع الشاشة */
-            margin: 0; /* إزالة الهوامش الافتراضية */
-        }
-
-        html, body {
-            height: 100%;
-            overflow: auto; /* لمنع ظهور شريط التمرير */
+            height: 100%; 
+            overflow: auto; 
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             background-image: url("https://files.catbox.moe/n1ggsm.jpeg");
-            background-size: 1500px; /* أو 'contain' حسب ما تفضله */
-            background-repeat: repeat; /* لتكرار الصورة */
-            background-position: center; /* اجعلها تبدأ من الزاوية العليا اليسرى */
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
         }
 
         header {
-            position: fixed; /* اجعل الرأس ثابتًا */
-            top: 0; /* وضعه في الأعلى */
-            left: 0; /* وضعه في اليسار */
-            width: 100%; /* اجعل العرض 100% */
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
             padding: 1.7rem 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: transparent;
-            z-index: 1000; /* تأكد من أنه فوق العناصر الأخرى */
+            z-index: 1000; 
+        }
+
+        .background-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: calc(80px + 20px); /* تعديل الارتفاع */
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: -1; 
         }
 
         .logo {
             display: flex;
             align-items: center;
+            position: relative; 
         }
 
         .logo-image {
@@ -122,18 +127,18 @@
         }
 
         .te p {
-            font-family: 'Rubik', sans-serif; /* استخدام خط Rubik هنا */
-            font-size: 1rem; /* يمكنك تعديل الحجم حسب الحاجة */
-            color: #fff; /* لون النص */
+            font-family: 'Rubik', sans-serif; 
+            font-size: 1rem; 
+            color: #fff; 
             text-align: right;
             width: 100%;
         }
 
         .te h1 {
-            font-family: 'Rubik', sans-serif; /* استخدام خط Rubik هنا */
-            font-size: 3.3rem; /* يمكنك تعديل الحجم حسب الحاجة */
-            color: #fff; /* لون النص */
-            text-align: left ; /* محاذاة النص في المنتصف */
+            font-family: 'Rubik', sans-serif; 
+            font-size: 3.3rem; 
+            color: #fff; 
+            text-align: left; 
         }
 
         .social {
@@ -170,8 +175,8 @@
             }
 
             section {
-                margin: 2rem 1rem; /* قلل الهوامش في الأجهزة المحمولة */
-                padding-top: 6rem; /* أو أي قيمة تناسب ارتفاع الرأس */
+                margin: 2rem 1rem; 
+                padding-top: 6rem; 
             }
 
             .main h1,
@@ -179,7 +184,7 @@
             .mains h3,
             .mains p,
             .te p {
-                text-align: right; /* محاذاة النص إلى اليسار */
+                text-align: right; 
             }
 
             .menu {
@@ -195,6 +200,7 @@
 
 <body>
     <header>
+        <div class="background-box"></div> <!-- مربع الخلفية -->
         <div class="logo">
             <img src="https://files.catbox.moe/y94bdv.png" alt="Logo" class="logo-image">
             <a href="#">ALPHA TEAM</a>
