@@ -6,6 +6,7 @@
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="John Doe">
+    <link rel="icon" href="img/logo.PNG" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,33 +14,36 @@
     <title>ALPHA TEAM</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
         * {
             margin: 0;
             padding: 0;
         }
-        html, body {
-            height: 100%; 
-            overflow: auto; 
+
+        html,
+        body {
+            height: 100%;
+            overflow: auto;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             background-image: url("https://files.catbox.moe/n1ggsm.jpeg");
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            background-position: center; 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         header {
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             padding: 1.7rem 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000; 
+            z-index: 1000;
         }
 
         .background-box {
@@ -47,19 +51,20 @@
             top: 0;
             left: 0;
             right: 0;
-            height: calc(80px + 20px); /* تعديل الارتفاع */
-            background-color: rgba(0, 0, 0, 0.5); 
-            z-index: -1; 
+            height: calc(80px + 20px);
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            position: relative; 
+            position: relative;
         }
 
         .logo-image {
-            width: 100px;
+            width: 50px;
+            /* تعديل حجم الشعار */
             height: auto;
             margin-right: 10px;
         }
@@ -69,6 +74,28 @@
             font-weight: 800;
             color: #fff;
             text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: red;
         }
 
         section {
@@ -83,24 +110,25 @@
             margin: 5rem auto;
         }
 
-        .main h2 {
-            font-size: 2rem;
-            font-weight: 600;
+        .main h2,
+        .main h1,
+        .te p {
             color: #fff;
             text-align: right;
             width: 100%;
         }
 
-        .main h1 {
+        .who {
             font-family: 'Rubik', sans-serif;
-            font-size: 2rem;
+            font-size: 1rem;
             font-weight: 600;
             color: #fff;
             text-align: right;
             width: 100%;
+            margin-top: 20px;
         }
 
-        .mains h3 {
+        .mains h2 {
             font-family: 'Rubik', sans-serif;
             font-size: 1rem;
             font-weight: 600;
@@ -118,27 +146,21 @@
             width: 100%;
         }
 
-        .main p {
-            margin-top: 1rem;
-            font-size: .20rem;
+        .te p {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1rem;
             color: #fff;
             text-align: right;
             width: 100%;
-        }
-
-        .te p {
-            font-family: 'Rubik', sans-serif; 
-            font-size: 1rem; 
-            color: #fff; 
-            text-align: right;
-            width: 100%;
+            margin-top: 10px;
         }
 
         .te h1 {
-            font-family: 'Rubik', sans-serif; 
-            font-size: 3.3rem; 
-            color: #fff; 
-            text-align: left; 
+            font-family: 'Rubik', sans-serif;
+            font-size: 3.3rem;
+            color: #fff;
+            text-align: left;
+            margin-top: 10px;
         }
 
         .social {
@@ -175,8 +197,8 @@
             }
 
             section {
-                margin: 2rem 1rem; 
-                padding-top: 6rem; 
+                margin: 2rem 1rem;
+                padding-top: 6rem;
             }
 
             .main h1,
@@ -184,7 +206,7 @@
             .mains h3,
             .mains p,
             .te p {
-                text-align: right; 
+                text-align: right;
             }
 
             .menu {
@@ -195,17 +217,31 @@
             }
         }
 
+
+
+     
+
+     
     </style>
 </head>
 
 <body>
     <header>
-        <div class="background-box"></div> <!-- مربع الخلفية -->
+        <div class="background-box"></div>
         <div class="logo">
             <img src="https://files.catbox.moe/y94bdv.png" alt="Logo" class="logo-image">
             <a href="#">ALPHA TEAM</a>
         </div>
-       
+
+        <nav>
+            <ul>
+                <li><a href="proj1.html">HOME</a></li>
+                <li><a href="galary.html">ABOUT US</a></li>
+                <li><a href="proj1.html">MEMBERS</a></li>
+                <li><a href="galary.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
         <label for="click" class="mainicon">
             <div class="menu">
                 <i class="bi bi-list"></i>
@@ -213,35 +249,54 @@
         </label>
     </header>
 
+    <!-- عنصر جديد لتوسيع الصورة -->
+    <div class="image-container">
+        <img src="img/PIC1.jpg" alt="Image" class="imgs"> <!-- عرض الصورة بشكل مباشر -->
+    </div>
+
     <section>
         <div class="main">
             <div class="detail">
-                <h1><span>من هم</span></h1>
+                <h2 class="who"><span>من هم</span></h2>
                 <h2><span style="color:rgb(255, 255, 255);">ALPHA TEAM</span></h2>
-                <div class="te"><p>هو مبادرة طلابية تهدف إلى إنشاء بيئة تعاونية غير مركزية، حيث يكون لكل عضو دور فعّال. مهمتنا هي تعزيز التعلم والتطوير المهني في مجال تكنولوجيا المعلومات، من خلال ربط الجانب النظري بالتطبيق العملي</p></div>
+                <div class="te">
+                    <p>هو مبادرة طلابية تهدف إلى إنشاء بيئة تعاونية غير مركزية، حيث يكون لكل عضو دور فعّال. مهمتنا هي
+                        تعزيز التعلم والتطوير المهني في مجال تكنولوجيا المعلومات، من خلال ربط الجانب النظري بالتطبيق
+                        العملي</p>
+                </div>
             </div>
         </div>
-        <hr>
-        <br>
+
         <div class="mains">
-            <h3>:اهداف الفريق</h3>
+            <h2>:اهداف الفريق</h2>
             <br>
-            <p>التعليم الشامل: نقوم بتنظيم دورات تعليمية عبر الإنترنت وفي الحرم الجامعي، نركز فيها على المواضيع المتقدمة، كما نقدم الإرشاد والدعم لطلاب السنة الأولى لمساعدتهم على فهم أساسيات مجال تكنولوجيا المعلومات.
-                <br> <br> <br>
-                تعاون وبناء شبكة داخلية: نسعى إلى بناء شبكة قوية بين طلاب تكنولوجيا المعلومات، تشجع على العمل الجماعي في المشاريع، وتكوين شركات ناشئة، وتطوير تطبيقات مبتكرة تفتح آفاقاً جديدة للفرص الوظيفية.
-                <br> <br> <br>
-                ربط العراق بالمجتمع العالمي لتكنولوجيا المعلومات: العراق متأخر في مجال تكنولوجيا المعلومات، ويهدف فريق Alpha إلى تغيير هذا الواقع من خلال تمكين بلدنا من أن يكون له دور فعّال في هذا المجال المتسارع. نطمح لأن يكون العراق مشاركًا وليس مجرد متفرج على التطورات التقنية العالمية.
-                <br> <br> <br>
-                لتميز الأكاديمي والمهني: نسعى إلى تغيير الفهم الخاطئ عن تكنولوجيا المعلومات، وإظهار أن المجال أوسع وأعمق من مجرد استخدام برامج مكتبية بسيطة. هدفنا هو تخريج طلاب يمتلكون مهارات عملية في البرمجة، الشبكات، والأمن السيبراني، ليصبحوا محترفين في مجالهم وليسوا فقط حاملين لشهادات.
-            </p>
+            <p>التعليم الشامل: نقوم بتنظيم دورات تعليمية عبر الإنترنت وفي الحرم الجامعي، نركز فيها على المواضيع المتقدمة، كما نقدم الإرشاد والدعم لطلاب السنة الأولى لمساعدتهم...</p>
         </div>
 
         <div class="social">
-            <a href="https://t.me/xteam_alpha"><i class="bi bi-telegram"></i></a>
-            <a href="https://www.instagram.com/talpha.dev"><i class="bi bi-instagram"></i></a>
+            <!-- محتوى وسائل التواصل الاجتماعي -->
         </div>
     </section>
 
+    <style>
+        /* أنماط إضافية */
+        .image-container {
+            display: flex;
+            justify-content: center; /* لمحاذاة الصورة في المنتصف */
+            margin: 20px 0; /* إضافة مسافة حول الصورة */
+        }
+    
+        .imgs {
+            cursor: pointer;
+            border: solid white px;
+            border-radius: 20px; /* تعديل الزوايا لتكون دائرية */
+            width: 500px;
+            max-width: 100%; /* اجعل عرض الصورة 100% من الحاوية */
+            height: auto; /* اجعل الارتفاع تلقائي للحفاظ على النسبة */
+            margin-top: 6rem;
+          
+        }
+    </style>
+    
 </body>
-
 </html>
