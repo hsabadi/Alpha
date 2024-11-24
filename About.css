@@ -1,0 +1,30 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 558px;
+}
+
+.u-section-1 .u-text-1 {
+  font-family: Bayon;
+  font-size: 2.25rem;
+  width: 784px;
+  margin: 32px auto 60px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 474px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-top: 60px;
+    margin-left: 23px;
+    margin-right: 23px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
